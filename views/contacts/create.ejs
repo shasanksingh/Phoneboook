@@ -1,0 +1,23 @@
+<%- include('../partials/header') -%>
+<h1>Create a contact</h1>
+
+<style>
+    label {
+        display: block;
+    }
+</style>
+
+<p style="color: red;">
+  <%= messages.error ? messages.error : '' %> 
+</p>
+
+<form action="/contacts" method="post">
+  <label>Name: <input type="text" id="name" name="name" required autofocus /></label>
+  <label>Phone: <input type="tel" id="phone" name="phone" /></label>
+  <label>Email: <input type="email" id="email" name="email" /></label>
+  <label>Website: <input type="url" id="website" name="website" /></label>
+  <label>Address: <textarea name="address" id="address" cols="30" rows="5"></textarea></label>
+  <button type="submit">Create</button>
+</form>
+
+<%- include('../partials/footer') -%>

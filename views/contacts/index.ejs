@@ -1,0 +1,21 @@
+<%- include('../partials/header') -%>
+<h1>All Contacts</h1>
+
+<a href="/contacts/create">Create</a>
+
+<p><%= contacts.length == 0 ? 'No contacts found' : '' %></p>
+
+
+<div>
+  <% contacts.forEach(function(contact){ %>
+    <p>
+      <h3>Name: <%= contact.name %></h3>
+      <h5>Phone: <%= contact.phone %></h5>
+      <h5>Email: <%= contact.email %></h5>
+      <h5>Website: <%= contact.website %></h5>
+      <h5>Address: <%= contact.address %></h5>
+    </p>
+  <% }); %>
+</div>
+
+<%- include('../partials/footer') -%>
